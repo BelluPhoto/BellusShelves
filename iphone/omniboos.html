@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta id="viewport" name="viewport" content="width=320; initial-scale=0.9; maximum-scale=0.9; user-scalable=no;">
+
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style type="text/css">
+        .coverimage {
+            width: auto !important;
+            height: auto !important;
+            max-width: 110px;
+            max-height: 110px;
+        }
+    </style>
+    <script type="text/javascript" src="prototype.js"></script>
+    <script type="text/javascript" src="animator.js"></script>
+    <script type="text/javascript" src="library.js"></script>
+</head>
+<body>
+    <div id="libraryheader" style="width: 100%; height: 88px; background: url(../images/shelfheader.jpg)">
+        <div id="librarybanner">Library</div>
+        
+        <div id="shelfnavigation">
+            <select class="shelf_selection" onchange="location.href = this.options[this.selectedIndex].value;"><option value="index.html">Books</option><option value="movies.html">Movies</option><option value="videogames.html">Videogames</option><option value="omniboos.html" selected="selected">Omniboos</option></select>
+        </div>
+    </div>
+    
+    <table id="mediatable" border="0" cellspacing="0" cellpadding="0" style="width: 100%; background-image: url(../images/shelfpattern.png)">
+        <tr id="collection"><td><div class="medium"><div class="title">X-Men: Dark Phoenix Saga Omnibus</div><span class="creator"></span><span class="rating"></span><span class="asin">1302912127</span><span class="description"></span><div class="cover coverimage" onclick="showDetails(this, event)"><img class="coverimage" src="../covers/EF5C2E93-C10B-43AA-A17E-8A7CAEE728D7-140.png" width="96" height="140"></div></div><div class="medium"><div class="title">Howard The Duck Omnibus</div><span class="creator">Steve Gerber</span><span class="rating"></span><span class="asin">0785130233</span><span class="description"></span><div class="cover coverimage" onclick="showDetails(this, event)"><img class="coverimage" src="../covers/2B39B9E5-70BD-4D21-83F3-763D1361EB31-140.png" width="96" height="140"></div></div><div class="medium"><div class="title">Thanos: The Infinity Saga Omnibus</div><span class="creator">Marvel Press Book Group</span><span class="rating"></span><span class="asin">1302926365</span><span class="description"></span><div class="cover coverimage" onclick="showDetails(this, event)"><img class="coverimage" src="../covers/E6C1CB39-807F-405E-8B49-A6B646B93236-140.png" width="96" height="140"></div></div><div class="medium"><div class="title">Red Hood and the Outlaws: The New 52 Omnibus Vol. 1</div><span class="creator">Lobdell, Scott</span><span class="rating"></span><span class="asin">1401284663</span><span class="description"></span><div class="cover coverimage" onclick="showDetails(this, event)"><img class="coverimage" src="../covers/22618228-08CF-4105-B3A5-90A1C5EA742E-140.png" width="94" height="140"></div></div></td>
+        </tr>
+    </table>
+    
+    <div id="details" onclick="hideDetails()">
+        <div id="detailscover"></div>
+        <div id="detailsheader">
+            <div id="detailstitle"></div>
+            <div id="detailscreator"></div>
+            <hr>
+        </div>
+
+        <div id="detailsbody">
+        </div>
+
+        <div id="detailsfooter">
+            <hr>
+            <a id="searchinsideanchor" href="#"><img id="searchinside" src="../images/searchinside.png" alt="Search Inside"></a>
+        </div>
+    </div> <!-- end details -->
+</body>
+</html>
